@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/item_normal_background"
+    android:padding="8dp">
+
+<RelativeLayout
+android:id="@+id/charge_item_in_layout"
+android:layout_width="match_parent"
+android:layout_height="74dp">
+
+<TextView
+    android:id="@+id/currencySymbol"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="5dp"
+    android:text="￥"
+    android:textColor="@color/black"
+    android:textSize="18sp" />
+
+<!-- 显示具体金额的 TextView -->
+<TextView
+    android:id="@+id/amount_money"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@id/currencySymbol"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="5dp"
+    android:text="0"
+    android:textColor="@color/black"
+    android:textSize="18sp" />
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+
+    <TextView
+        android:id="@+id/list_good_right_in_cart_real_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="立赠"
+        android:textColor="#FFFF0000" />
+
+    <TextView
+        android:id="@+id/extra_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/list_good_right_in_cart_real_price"
+        android:contentDescription="送的余额" />
+
+    <TextView
+        android:id="@+id/list_good_right_add"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="详情>>"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="4dp" />
+</RelativeLayout>
+
+</RelativeLayout>
+    </LinearLayout>

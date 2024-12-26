@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 当选中时，显示绿色边框 -->
+    <item android:drawable="@drawable/item_selected_background" android:state_pressed="true"/>
+    <!-- 默认背景 -->
+    <item android:drawable="@android:color/white"/>
+</selector>

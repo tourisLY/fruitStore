@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/good_right_img"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/list_good_right_in_cart_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        >
+        <TextView
+            android:id="@+id/good_right_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="商品名字"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:id="@+id/good_right_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/good_right_name"
+            android:textSize="10sp"
+            android:text="我是商品简介"
+            />
+        <TextView
+            android:id="@+id/list_good_right_cheap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="促销价"
+            android:layout_below="@id/good_right_msg"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            >
+            <TextView
+                android:id="@+id/list_good_right_in_cart_real_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="价格"
+                android:textColor="#FFFF0000"
+                />
+            <TextView
+                android:id="@+id/list_good_right_in_cart_early_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="原价"
+                android:layout_toEndOf="@id/list_good_right_in_cart_real_price"
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/list_good_right_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:contentDescription="数量信息"
+            android:gravity="bottom"
+            android:text="0" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 轮播图部分 -->
+    <ImageView
+        android:id="@+id/bannerImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:contentDescription="轮播图"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_image" />
+
+    <!-- 第二部分：红色背景，放在底部 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="#570100"
+        android:orientation="vertical">
+
+        <!-- 第二个容器，用图片填充 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_corner_background"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- 圆角矩形的上半部分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/men_dian_zi_qu"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/profile_address" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="门店自取"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_gravity="center"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/order"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="外卖点单"
+                        android:gravity="center"
+                        android:textSize="30sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 圆角矩形的下半部分 -->
+            <!-- 圆角矩形的下半部分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- 如果用户未登录 -->
+                <LinearLayout
+                    android:id="@+id/notLoggedInLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="欢迎光临 FruitStore, 请登录"
+                        android:textSize="18sp"
+                        android:layout_marginEnd="10dp" />
+
+                    <Button
+                        android:id="@+id/loginButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="立即登录"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+
+                <!-- 如果用户已登录 -->
+                <LinearLayout
+                    android:id="@+id/loggedInLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <!-- 上部分：头像、用户名、VIP信息 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/user_img"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/profile"
+                            android:layout_marginEnd="10dp"
+                            android:contentDescription="用户头像"/>
+
+                        <TextView
+                            android:id="@+id/user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="用户名"
+                            android:textSize="18sp"
+                            android:layout_marginEnd="10dp" />
+
+                        <!-- VIP状态, 移动到最右边 -->
+                        <TextView
+                            android:id="@+id/vipStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VIP会员"
+                            android:textSize="18sp"
+                            android:textColor="#FFD700"
+                            android:layout_weight="1" /> <!-- 这个属性将 `vipStatus` 推到最右边 -->
+                    </LinearLayout>
+
+                    <!-- 下部分：余额和卡券信息 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <!-- 左边：余额 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <!-- 余额的图标 -->
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/proflie_balance"
+                                android:contentDescription="余额图标"/>
+
+                            <TextView
+                                android:text="余额"
+                                android:textSize="16sp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_width="match_parent"/>
+
+                            <TextView
+                                android:id="@+id/balance_num"
+                                android:text="0"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"/>
+                        </LinearLayout>
+
+                        <!-- 右边：卡券 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <!-- 卡券图标 -->
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/profile_ticket"
+                                android:contentDescription="卡券图标"/>
+
+                            <TextView
+                                android:text="卡券"
+                                android:textSize="16sp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_width="match_parent"/>
+
+                            <TextView
+                                android:id="@+id/ticket_num"
+                                android:text="0"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:contentDescription="第二部分图片"
+            android:scaleType="centerCrop"
+            android:src="@drawable/second_image" />
+
+    </LinearLayout>
+
+</LinearLayout>

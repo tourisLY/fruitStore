@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/nav_home"
+    >
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.fruitstore.fragment.HomeFragment"
+        />
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.fruitstore.fragment.CartFragment"
+        />
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="com.example.fruitstore.fragment.OrderFragment"
+        />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.fruitstore.fragment.ProfileFragment"
+        />
+</navigation>
